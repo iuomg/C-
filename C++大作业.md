@@ -57,6 +57,23 @@
 - github上添加ssh key：
 将目录/root/.ssh/id_rsa.pub的信息输入到github网页上个人设置页面中的SSH and GPG Keys中
 
+#### 步骤六 修改代码
+- 在/home/iu/nebala/src/中的CmdProcessor.cpp最后添加返回系统时间的函数。
+
+#### 步骤七 提交PR
+- `git remote -v`
+- `git remote rm origin`
+- `git remote add origin https://github.com/iuomg/nebula.git`
+- 创建分支myfeature `git checkout -b myfeature`
+- add修改文件 `git add src/console/CmdProcessor.cpp`
+- 添加说明 `git commit -m "time output change"`
+- 关联上游分支并且上传新建的myfeature分支 `git push --set-upstream origin myfeature`
+- 提交PR
+**遇到的问题：** push完之后 网页没有出现new pr
+
+切换分支之后可以提交pr但是修改后的代码没有被accpeted
+
+### 总结：
 
 
 
